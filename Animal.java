@@ -5,7 +5,7 @@
  * Class: Java20B
  */
 
-abstract class Animal {
+abstract class Animal implements FoodAmount {
     //Skyddar alla instansvariabler (Encapsulation)
     private String name;
     private int weight;
@@ -14,7 +14,7 @@ abstract class Animal {
         this.name = name;
         this.weight = weight;
     }
-
+    
     public int getWeight() {
         return weight;
     }

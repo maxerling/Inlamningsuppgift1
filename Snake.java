@@ -6,7 +6,7 @@ import javax.swing.*;
  * Copyright: MIT
  * Class: Java20B
  */
-public class Snake extends Animal implements FoodAmount {
+public class Snake extends Animal {
 
 
     Snake(String name, int weight) {
