@@ -14,13 +14,18 @@ abstract class Animal implements FoodAmount {
         this.name = name;
         this.weight = weight;
     }
-    
+
     public int getWeight() {
         return weight;
     }
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 
     //enum
