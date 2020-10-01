@@ -16,7 +16,7 @@ public class Main {
         list.add(catOve);
         list.add(snakeHypno);
         String input = JOptionPane.showInputDialog("What animal should get food?");
-        boolean inputIsValid = true;
+        boolean inputIsValid = false;
 
 //"Outside and before the for loop,
 // initialize a bool variable that will serve to record whether the condition is true or not." You can just name that boolean variable "inputIsValid" if that helps
@@ -27,7 +27,6 @@ public class Main {
                     inputIsValid = true;
                     break;
                 }
-                inputIsValid = false;
             }
         } catch (NullPointerException e) {
             System.exit(0);
