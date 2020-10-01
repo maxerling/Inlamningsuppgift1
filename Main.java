@@ -19,8 +19,7 @@ public class Main {
         String input = JOptionPane.showInputDialog("What animal should get food?");
 
 
-//"Outside and before the for loop,
-// initialize a bool variable that will serve to record whether the condition is true or not." You can just name that boolean variable "inputIsValid" if that helps
+
         if(input==null){
             //log.error("Animal selector input was null - exiting.");
             return;
