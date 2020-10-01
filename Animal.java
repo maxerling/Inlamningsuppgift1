@@ -23,11 +23,6 @@ abstract class Animal implements FoodAmount {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return getName();
-    }
-
     //enum
     enum FoodType {
         CAT("kattfoder"),

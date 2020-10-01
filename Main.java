@@ -3,7 +3,6 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main {
-
     public static void main(String[] args) {
         Animal dogSixten = new Dog("Sixten", 5000); //lista, loopar igenom istället för if-sats
         Animal dogDogge = new Dog("Dogge", 10_000);
@@ -16,16 +15,44 @@ public class Main {
         list.add(catVenus);
         list.add(catOve);
         list.add(snakeHypno);
-        String input = JOptionPane.showInputDialog("Vilket djur ska få mat?");
+        String input = JOptionPane.showInputDialog("What animal should get food?");
+        boolean inputIsValid = true;
+
+//"Outside and before the for loop,
+// initialize a bool variable that will serve to record whether the condition is true or not." You can just name that boolean variable "inputIsValid" if that helps
         try {
             for (Animal i : list) {
-                if (input.equalsIgnoreCase(String.valueOf(i))) {
+                if (input.equalsIgnoreCase(i.getName())) {
                     i.printFoodAmount();
+                    inputIsValid = true;
+                    break;
                 }
+                inputIsValid = false;
             }
         } catch (NullPointerException e) {
             System.exit(0);
         }
+
+        if (!(inputIsValid)) {
+            JOptionPane.showMessageDialog(null, "Wrong input! Needs to be valid name.");
+        }
+
+
+
+
+        /*try {
+            for (int i = 0; i < list.size(); i++) {
+                if (input.equalsIgnoreCase(list.get(i).getName())) {
+                    list.get(i).printFoodAmount();
+                    break;
+                } else if (i == list.size() - 1) {
+                    JOptionPane.showMessageDialog(null, "Wrong input! Needs to be valid name.");
+                }
+            }
+        } catch (NullPointerException e) {
+            System.exit(0);
+        }*/
+
         /*try {
             if (input.equalsIgnoreCase(catVenus.getName())) {
                 catVenus.printFoodAmount();
@@ -43,6 +70,7 @@ public class Main {
         } catch (NullPointerException e) {
             System.exit(0);
         }*/
+
     }
 
 
