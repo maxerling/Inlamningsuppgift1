@@ -15,12 +15,17 @@ public class Main {
         list.add(catVenus);
         list.add(catOve);
         list.add(snakeHypno);
-        String input = JOptionPane.showInputDialog("What animal should get food?");
         boolean inputIsValid = false;
+        String input = JOptionPane.showInputDialog("What animal should get food?");
+
 
 //"Outside and before the for loop,
 // initialize a bool variable that will serve to record whether the condition is true or not." You can just name that boolean variable "inputIsValid" if that helps
-        try {
+        if(input==null){
+            //log.error("Animal selector input was null - exiting.");
+            return;
+        }
+
             for (Animal i : list) {
                 if (input.equalsIgnoreCase(i.getName())) {
                     i.printFoodAmount();
@@ -28,9 +33,6 @@ public class Main {
                     break;
                 }
             }
-        } catch (NullPointerException e) {
-            System.exit(0);
-        }
 
         if (!(inputIsValid)) {
             JOptionPane.showMessageDialog(null, "Wrong input! Needs to be valid name.");
