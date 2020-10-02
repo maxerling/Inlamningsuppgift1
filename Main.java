@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Animal dogSixten = new Dog("Sixten", 5000); //lista, loopar igenom istället för if-sats
+        Animal dogSixten = new Dog("Sixten", 5000);
         Animal dogDogge = new Dog("Dogge", 10_000);
         Animal catVenus = new Cat("Venus", 5000);
         Animal catOve = new Cat("Ove", 3000);
@@ -21,7 +21,6 @@ public class Main {
 
 
         if(input==null){
-            //log.error("Animal selector input was null - exiting.");
             return;
         }
 
