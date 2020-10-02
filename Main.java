@@ -18,19 +18,17 @@ public class Main {
         boolean inputIsValid = false;
         String input = JOptionPane.showInputDialog("What animal should get food?");
 
-
-
-        if(input==null){
+        if (input == null) {
             return;
         }
 
-            for (Animal i : list) {
-                if (input.equalsIgnoreCase(i.getName())) {
-                    i.printFoodAmount();
-                    inputIsValid = true;
-                    break;
-                }
+        for (Animal i : list) {
+            if (input.equalsIgnoreCase(i.getName())) {
+                i.printFoodAmount();
+                inputIsValid = true;
+                break;
             }
+        }
 
         if (!(inputIsValid)) {
             JOptionPane.showMessageDialog(null, "Wrong input! Needs to be valid name.");
