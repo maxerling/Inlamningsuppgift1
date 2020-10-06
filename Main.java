@@ -16,7 +16,7 @@ public class Main {
         list.add(catOve);
         list.add(snakeHypno);
         boolean inputIsValid = false;
-        String input = JOptionPane.showInputDialog("What animal should get food?");
+        String input = JOptionPane.showInputDialog("Vilket djur ska få mat?");
 
         if (input == null) {
             return;
@@ -31,7 +31,7 @@ public class Main {
         }
 
         if (!(inputIsValid)) {
-            JOptionPane.showMessageDialog(null, "Wrong input! Needs to be valid name.");
+            JOptionPane.showMessageDialog(null, "Felaktig inmatning! Måste vara ett giltig namn.");
         }
 
 
